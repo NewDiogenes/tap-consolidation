@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+apply plugin: 'application'
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+mainClassName = "com.example.consolodation.TripConsolidationApplication"
+
+run {
+  if(findProperty('file') != null)
+    args findProperty('file')
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testCompile 'junit:junit:4.12'
+  testCompile 'org.mockito:mockito-core:2.+'
+  compile 'io.reactivex.rxjava2:rxjava:2.2.6'
+}
+
+checkstyle {
+  configFile = new File(rootDir, "checkstyle.xml")
+  toolVersion = "8.7"
+}
