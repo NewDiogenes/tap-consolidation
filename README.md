@@ -41,9 +41,9 @@ certain assumptions have been made about the test data.
 ### Un-Implemented/Minimal Requirements
 For the moment, the output is printed to system.out instead of being written to a csv file.
 The logic for calculating the charge amount for a trip is also minimally implemented.
-The test data supplied is also pretty basic.
+The test data supplied is also pretty basic.g
  
-###Assumptions
+### Assumptions
 1: The input data will only contain data values, without a header line containing the column names
 
 2: The input data is well formed (there are basically no input validations)
